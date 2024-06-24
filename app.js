@@ -112,6 +112,7 @@ function nuevoNivel(){
     maxNumero += 5; //Aumentar rango
     maxIntentos = maxIntentos + 3; //Acumular y aumentar intentos
     intentosGuardados = maxIntentos;
+    document.getElementById("numUser").max = `${maxNumero}`;
     asignarTextoElemento('#level', `Nivel: ${nivel}`);
     asignarTextoElemento('p', `Ingrese un número entre 1 y ${maxNumero}`);
     limpiarCaja();
