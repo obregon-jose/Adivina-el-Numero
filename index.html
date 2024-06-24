@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Adivina el Numero Secreto</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <h1>Juego del número secreto</h1>
+                    <p class="texto__parrafo"></p>
+                </div>
+                <div class="chute container__botones">
+                    <div class="level_intentos">
+                        <span id="level" class="level">Nivel: 1</span>
+                        <span id="intentos" class="intentos">Oportunidades: 5</span>
+                    </div>
+                    <input id="numUser" type="number" min="1" class="container__input">
+                </div>
+                <div class="chute container__botones">
+                    <button onclick="iniciarJuego()" class="container__boton" id="iniciarJuego">Jugar</button>
+                    <button onclick="jugar()" class="container__boton" id="jugar">Intentar</button>
+                    <button onclick="nuevoNivel()" class="container__boton" id="nuevoNivel"></button>
+                    <button onclick="reiniciarNivel()" class="container__boton" id="reiniciarNivel">Reiniciar Nivel</button>                    
+                    <button onclick="volverJugar()" class="container__boton" id="nuevoJuego">Jugar de Nuevo</button>
+                </div>
+            </div>
+            <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
+        </div>
+    </div>
+    <div id="confeti-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;"></div>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>
