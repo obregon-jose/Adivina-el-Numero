@@ -138,26 +138,25 @@ button {
 
 
 /* MOBILE */
-
 @media (max-width: 768px) {
     .container2 {
-        width: 90%; /* Hace que el contenedor sea más pequeño en dispositivos móviles */
-        height: auto; /* Hace que la altura sea automática para adaptarse al contenido */
-        flex-direction: column; /* Cambia la disposición de los elementos a vertical */
+        width: 90%;
+        height: auto;
+        flex-direction: column;
     }
 
     .container__informaciones, .container__imagen-persona {
-        width: 100%; /* Hace que los elementos hijos ocupen todo el ancho del contenedor */
-        transform: translateY(-30px);
+        width: 100%;
+        /* transform: translateY(-30px); */
     }
 
     h1 {
-        font-size: 48px; /* Reduce el tamaño del título para pantallas pequeñas */
-        padding-bottom: 1rem; /* Reduce el espacio debajo del título */
+        font-size: 48px;
+        padding-bottom: 1rem;
     }
 
     .texto__parrafo, .container__input, .container__boton {
-        font-size: 18px; /* Reduce el tamaño de la fuente para textos, inputs y botones */
+        font-size: 18px;
     }
 
     .container__botones {
@@ -169,7 +168,7 @@ button {
         padding: 12px; /* Reduce el padding de botones e inputs para ahorrar espacio */
     }
     .container__imagen-persona {
-        display: none; /* Oculta la imagen en dispositivos móviles */
+        display: none;
     }
 
 }

@@ -8,9 +8,6 @@ let intentosGuardados;
 function game(){
     buttonVisibility('numUser');
     BotonesJugando()
-    // buttonVisibility('jugar');
-    // buttonVisibility('nuevoNivel');
-    // buttonVisibility('reiniciarNivel');
     buttonVisibility('nuevoJuego');
 }
 
@@ -23,7 +20,6 @@ function iniciarJuego() {
     condicionesIniciales();
     buttonVisibility('numUser');
     buttonVisibility('iniciarJuego');
-
     buttonVisibility('jugar');
     buttonVisibility('reiniciarNivel');
 }
@@ -35,7 +31,6 @@ function condicionesIniciales(){
     maxIntentos = 5;
     intentosGuardados = maxIntentos;
     numeroSecreto = generarNumeroSecreto();
-
     asignarTextoElemento('h1', 'Juego del número secreto');
     asignarTextoElemento('p', `Ingrese un número entre 1 y ${maxNumero}`);
     asignarTextoElemento('#level', `Nivel: ${nivel}`);
@@ -93,34 +88,24 @@ function ganar(){
     intentos = 0;
     asignarTextoElemento('#nuevoNivel', `Siguiente Nivel`);
     BotonesJugando();
-    // buttonVisibility('jugar');
-    // buttonVisibility('nuevoNivel');
-    // buttonVisibility('reiniciarNivel');
 }
 function perder(){
     asignarTextoElemento('p', `Perdiste. El número secreto era ${numeroSecreto}`);
     asignarTextoElemento('#intentos', `Juego terminado.`);
     BotonesSinJugar();
-    // buttonVisibility('jugar');
-    // buttonVisibility('reiniciarNivel');
-    // buttonVisibility('nuevoJuego');
 }
 
 function nuevoNivel(){
     intentos = 0;
     numeroSecreto = generarNumeroSecreto();
     maxNumero += 5; //Aumentar rango
-    maxIntentos = maxIntentos + 3; //Acumular y aumentar intentos
+    maxIntentos = maxIntentos + 3; //Acumular y aumentar vidas
     intentosGuardados = maxIntentos;
     document.getElementById("numUser").max = `${maxNumero}`;
     asignarTextoElemento('#level', `Nivel: ${nivel}`);
     asignarTextoElemento('p', `Ingrese un número entre 1 y ${maxNumero}`);
     limpiarCaja();
     BotonesJugando();
-
-    // buttonVisibility('jugar');    
-    // buttonVisibility('nuevoNivel');
-    // buttonVisibility('reiniciarNivel');
 }
 
 function reiniciarNivel(){
@@ -134,10 +119,6 @@ function reiniciarNivel(){
     condicionesIniciales();
     limpiarCaja();
     BotonesSinJugar();
-
-    // buttonVisibility('jugar');
-    // buttonVisibility('reiniciarNivel');
-    // buttonVisibility('nuevoJuego');
  }
 
 function generarNumeroSecreto() {
