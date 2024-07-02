@@ -128,9 +128,9 @@ function generarNumeroSecreto() {
 function buttonVisibility(buttonId) {
     let button = document.getElementById(buttonId);
     if (button.style.display === "none") {
-        button.style.display = "block"; // Muestra el botón si está oculto
+        button.style.display = "block";
     } else {
-        button.style.display = "none"; // Oculta el botón si está visible
+        button.style.display = "none";
     }
 }
 
@@ -144,9 +144,10 @@ function BotonesSinJugar() {
     buttonVisibility('jugar');
     buttonVisibility('reiniciarNivel');
     buttonVisibility('nuevoJuego');
+    buttonVisibility('numUser');
 }
 
-//Función para la animación de confeti
+
 function lanzarConfeti() {
     dispararConfeti();
     // setTimeout(() => dispararConfeti(), 1000);
@@ -161,7 +162,7 @@ function dispararConfeti() {
         confeti.classList.add('confeti');
         confeti.style.backgroundColor = colores[Math.floor(Math.random() * colores.length)];
         confeti.style.left = `${Math.random() * 100}%`;
-        confeti.style.animationDuration = `${Math.random() * 3 + 3}s`; // Duración entre 2 y 5 segundos
+        confeti.style.animationDuration = `${Math.random() * 3 + 3}s`;
         confeti.style.opacity = Math.random();
         confeti.style.transform = `scale(${Math.random()})`;
         confeti.style.width = `${Math.random() * 10 + 5}px`;
@@ -169,12 +170,10 @@ function dispararConfeti() {
 
         document.getElementById('confeti-container').appendChild(confeti);
 
-        // Eliminar confeti después de que termine la animación para no afectar el rendimiento
         setTimeout(() => {
             confeti.remove();
         }, confeti.style.animationDuration.replace('s', '') * 1000);
     }
 }
-
 
 game();

@@ -65,17 +65,16 @@ body::before {
     cursor: pointer;
 }
 
-
 .level_intentos {
     width: 100%;
-    /* height: 72px; */
-    height: auto; /* Cambiado de 72px a auto para permitir ajuste de contenido */
+    height: auto; 
     border-radius: 16px;
     background-color: #cce0f8;
     border: none;
     padding: 0.6rem;
     font-size: 24px;
     font-weight: 700;
+    flex: 100%;
 }
 .level_intentos span {
     display: block;
@@ -161,11 +160,17 @@ button {
 
     .container__botones {
         flex-direction: column; /* Cambia la disposición de los botones a vertical */
-        gap: 1em; /* Ajusta el espacio entre botones */
+        gap: 1em; 
     }
 
     .container__boton, .container__input {
-        padding: 12px; /* Reduce el padding de botones e inputs para ahorrar espacio */
+        padding: 12px; 
+         /* Reduce el padding de botones e inputs para ahorrar espacio */
+    }
+    .container__boton {
+        /* padding: 12px; */
+        margin-top: 1rem;
+         /* Reduce el padding de botones e inputs para ahorrar espacio */
     }
     .container__imagen-persona {
         display: none;
@@ -189,3 +194,13 @@ button {
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
 }
+
+.confeti-container{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    pointer-events: none; 
+    z-index: 9999;
+} 
