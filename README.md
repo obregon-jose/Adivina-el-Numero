@@ -1,5 +1,5 @@
 # Adivina el Numero Secreto
-#### Desarrollado durante el curso de Oracle y Alura Latam
+### Desarrollado durante el programam Oracle Next Education(ONE) junto con Alura Latam
 <div align="center">
   <img src="img/image.png" alt="encryp-decrypt-text" />
 </div>
